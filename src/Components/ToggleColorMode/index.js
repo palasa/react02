@@ -8,6 +8,6 @@ export default function ToggleColorMode() {
     <IconButton
       onClick={toggleColorMode}
       icon={colorMode === 'dark' ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
-    ></IconButton>
+    />
   );
 }

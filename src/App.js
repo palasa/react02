@@ -1,8 +1,7 @@
 import { ChakraProvider, Heading, ThemeProvider, Box } from '@chakra-ui/react';
-// import { theme } from "@chakra-ui/react";
 import { Component } from 'react';
-import { ToggleColorMode } from './Components';
-import { greenSeaTheme } from './theme';
+import { Counter, ToggleColorMode } from './Components';
+import { greenSeaTheme, pinkTheme } from './theme';
 
 class App extends Component {
   render() {
@@ -14,6 +13,7 @@ class App extends Component {
           </Box>
 
           <Heading>Test</Heading>
+          <Counter />
         </ThemeProvider>
       </ChakraProvider>
     );

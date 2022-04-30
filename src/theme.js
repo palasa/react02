@@ -20,6 +20,6 @@ const greenSeaTheme = extendTheme(
   withDefaultColorScheme({ colorScheme: 'green-sea' })
 );
 
-const redTheme = extendTheme(withDefaultColorScheme({ colorScheme: 'pink' }));
+const pinkTheme = extendTheme(withDefaultColorScheme({ colorScheme: 'pink' }));
 
-export { greenSeaTheme, redTheme };
+export { greenSeaTheme, pinkTheme };
