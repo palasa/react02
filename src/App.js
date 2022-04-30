@@ -11,7 +11,6 @@ class App extends Component {
           <Box pos="absolute" right={5} top={5}>
             <ToggleColorMode />
           </Box>
-
           <Heading>Test</Heading>
           <Counter />
         </ThemeProvider>

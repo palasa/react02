@@ -1,26 +1,18 @@
-import { Box, HStack, IconButton } from '@chakra-ui/react';
-import { useState, useEffect } from 'react';
-import { FaMinus, FaPlus } from 'react-icons/fa';
+import { HStack } from '@chakra-ui/react';
+import CounterBox from './CounterBox';
+import { CounterButton } from './CounterButton';
+import { CounterProvider } from './counterStore';
 
-function Counter () {
-
-
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    // 相当于 ComponentDidMount + ComponentDidUpdate
-    console.log('useEffect!!!')
-    document.title = `当前的数量为${count}`
-  })
-
+function Counter() {
   return (
-    <HStack>
-      <IconButton onClick={()=>{setCount(count-1)}} icon={<FaMinus />} />
-      <Box width={100}>{count}</Box>
-      <IconButton onClick={()=>{setCount(count+1)}} icon={<FaPlus />} />
-    </HStack>
+    <CounterProvider>
+      <HStack>
+        <CounterButton type="decrement" />
+        <CounterBox />
+        <CounterButton type="increment" />
+      </HStack>
+    </CounterProvider>
   );
-  
 }
 
 export default Counter;
