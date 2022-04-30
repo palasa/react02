@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider, Heading, ThemeProvider, Box } from '@chakra-ui/react';
+// import { theme } from "@chakra-ui/react";
+import { Component } from 'react';
+import { ToggleColorMode } from './Components';
+import { greenSeaTheme } from './theme';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <ChakraProvider>
+        <ThemeProvider theme={greenSeaTheme}>
+          <Box pos="absolute" right={5} top={5}>
+            <ToggleColorMode />
+          </Box>
+
+          <Heading>Test</Heading>
+        </ThemeProvider>
+      </ChakraProvider>
+    );
+  }
 }
 
 export default App;
